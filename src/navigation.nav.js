@@ -15,8 +15,8 @@ import StatsPeriodeComponent from './components/statsPeriode/statsPeriode.compon
 import TransfertsComponent from './components/Transferts/Transferts.component';
 import EditPasswordComponent from './components/EditPassword/EditPassword.component'
 import ChoiceProcessComponent from './components/Clients/ChoiceProcess/ChoiceProcess.component'
-import AddRechargeComponent from './components/Rechargement/add.component' // OLD
-import RechargePeriodeComponent from './components/RecharchePeriode/recharchePeriode.component' // OLD
+// import AddRechargeComponent from './components/Rechargement/add.component' // OLD
+// import RechargePeriodeComponent from './components/RecharchePeriode/recharchePeriode.component' // OLD
 
 /* ------------ Online ------------*/
 
@@ -64,8 +64,8 @@ const NavigationApp = ({ navigation }) => (
       <Drawer.Screen options={{ swipeEnabled: false }} name="StatsPeriode" component={StatsPeriodeComponent} />
       <Drawer.Screen options={{ swipeEnabled: false }} name="EditPassword" component={EditPasswordComponent} />
       <Drawer.Screen options={{ swipeEnabled: false }} name="ChoiceProcess" component={ChoiceProcessComponent} />
-      <Drawer.Screen options={{ swipeEnabled: false }} name="AddRecharge" component={AddRechargeComponent} />
-      <Drawer.Screen options={{ swipeEnabled: false }} name="RechargePeriode" component={RechargePeriodeComponent} />
+      {/* <Drawer.Screen options={{ swipeEnabled: false }} name="AddRecharge" component={AddRechargeComponent} /> */}
+      {/* <Drawer.Screen options={{ swipeEnabled: false }} name="RechargePeriode" component={RechargePeriodeComponent} /> */}
       <Drawer.Screen options={{ swipeEnabled: false }} name="Dashboard" component={DashboardComponent} options={{ headerLeft: () => navigation.toggleDrawer() }} />
 
       {/* ------------ Section Online ------------- */}
