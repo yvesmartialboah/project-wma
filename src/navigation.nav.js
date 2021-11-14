@@ -15,8 +15,8 @@ import StatsPeriodeComponent from './components/statsPeriode/statsPeriode.compon
 import TransfertsComponent from './components/Transferts/Transferts.component';
 import EditPasswordComponent from './components/EditPassword/EditPassword.component'
 import ChoiceProcessComponent from './components/Clients/ChoiceProcess/ChoiceProcess.component'
-import AddRechargeComponent from './components/Rechargement/add.component'
-import RechargePeriodeComponent from './components/RecharchePeriode/recharchePeriode.component' 
+import AddRechargeComponent from './components/Rechargement/add.component' // OLD
+import RechargePeriodeComponent from './components/RecharchePeriode/recharchePeriode.component' // OLD
 
 /* ------------ Online ------------*/
 

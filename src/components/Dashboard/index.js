@@ -242,11 +242,10 @@ const DashboardComponent = ({ navigation, lib }) => {
             {/* Deuxième Ligne */}
 
              {/* Troisième Ligne */}
-             <Stack space={5} mt={0} alignItems="center">
               {/* Rechargement */}
+             <Stack space={5} mt={0} alignItems="center">
               <Stack direction={'row'} space={5} style={stylesDashboard.stack}>
-                {/* Rechargement xxx */}
-                <TouchableOpacity
+                {/* <TouchableOpacity
                   onPress={() => {
                     navigation.navigate('AddRecharge', {
                       reload : {
@@ -276,10 +275,10 @@ const DashboardComponent = ({ navigation, lib }) => {
                     <FontAwesome name="dollar" size={30} color="#fff" />
                       Rechargement du compte client
                   </Center>
-                </TouchableOpacity>
+                </TouchableOpacity> */}
 
                 {/* xxxxx */}
-                 <TouchableOpacity
+                 {/* <TouchableOpacity
                   onPress={() => {
                     navigation.navigate('RechargePeriode',{
                       reload : {
@@ -307,7 +306,7 @@ const DashboardComponent = ({ navigation, lib }) => {
                     <FontAwesome name="dollar" size={30} color="#fff" />
                     Historique des Rechargements
                   </Center>
-                </TouchableOpacity> 
+                </TouchableOpacity>  */}
 
               </Stack>
               {/*  */}
