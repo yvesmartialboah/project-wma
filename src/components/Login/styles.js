@@ -25,7 +25,7 @@ export const stylesLogin = StyleSheet.create({
     text: {
         color: '#abb5be',
         fontWeight: 'bold',
-        fontSize: 14,
+        fontSize: 16,
     },
     text2: {
         color: '#abb5be',

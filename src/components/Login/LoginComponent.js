@@ -327,7 +327,7 @@ const LoginComponent = ({ navigation, lib }) => {
                 </Animatable.View>
               </View>
               <View style={stylesLogin.lineSecond}>
-                <Text style={stylesLogin.text}>Wma</Text>
+                <Text style={stylesLogin.text}>Wassa-Enrollement</Text>
               </View>
             </Box>
 
