@@ -125,10 +125,6 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
     }
 
     const TransfertDataClient = () => {
-        // const url = 'http://51.158.144.47/api_wma2/public/api/enquete';
-        // const url = 'https://good-dingo-45.loca.lt/kankumussa3/api/kankumussa/kyc/SaveManyclients?token='+ data_user[0].token;
-        // const url = 'http://209.126.3.251/plesk-site-preview/wma.com/https/209.126.3.251/api/kankumussa/kyc/SaveManyclients?token='+ data_user[0].token; // server
-        // const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterParticuliers?token=' + data_user[0].token; //server Plesk Us
         const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterParticuliers'; //server Plesk Us
         fetch(url, {
             method: 'POST',
@@ -137,11 +133,6 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(ClientRegisterLocal)
-            // body: JSON.stringify({
-            //     numero: 'emailAt',
-            //     nom: 'passwordAt',
-            //     // data : ClientRegisterLocal
-            // })
         })
             .then((responses) => responses.json())
             .then((response) => {
@@ -201,10 +192,6 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
     }
 
     const TransfertDataEntreprise = () => {
-        // const url = 'http://51.158.144.47/api_wma2/public/api/enquete';
-        // const url = 'https://good-dingo-45.loca.lt/kankumussa3/api/kankumussa/kyc/SaveManyclients?token='+ data_user[0].token;
-        // const url = 'http://209.126.3.251/plesk-site-preview/wma.com/https/209.126.3.251/api/kankumussa/kyc/SaveManyclients?token='+ data_user[0].token; // server
-        // const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterEntreprises?token=' + data_user[0].token; //server Plesk Us
         const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterEntreprises'; //server Plesk Us
         fetch(url, {
             method: 'POST',
@@ -213,11 +200,6 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify(ClientCompanyLocal)
-            // body: JSON.stringify({
-            //     numero: 'emailAt',
-            //     nom: 'passwordAt',
-            //     // data : ClientCompanyLocal
-            // })
         })
             .then((responses) => responses.json())
             .then((response) => {

@@ -99,11 +99,6 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
     }
 
     const saveData = () => {
-        // const url = 'http://kankumussa.tchimou.com/app/api/kankumussa/kyc/clients';
-        // const url = 'http://51.158.144.47/api_wma2/public/api/enquete';
-        // const url = 'https://good-dingo-45.loca.lt/kankumussa3/api/kankumussa/kyc/clients?token='+ data_user[0].token;
-        // const url = 'http://209.126.3.251/plesk-site-preview/wma.com/https/209.126.3.251/api/kankumussa/kyc/clients?token='+ data_user[0].token; // server
-        // const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/kankumussa/kyc/clients?token='+ data_user[0].token; // server Plesk Us
         const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterParticulier?token=' + data_user[0].token; //server Plesk Us
         fetch(url, {
             method: 'POST',
@@ -160,7 +155,8 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
             .then((responses) => responses.json())
             .then((response) => {
                 featureLoad()
-                // console.log(typeof response, 'responsex')
+                console.log( response, 'response')
+                console.log(typeof response, 'responsex')
                 console.log(response, 'response')
                 // if (response.status == 200) {
                 if (response.code == 200) {

@@ -98,9 +98,7 @@ const EditPasswordComponent = ({ navigation, route, lib }) => {
 
     const nextPage = (param) => {
         console.log(param)
-        // const url = 'http://kankumussa.tchimou.com/app/api/kankumussa/kyc/clients';
-        // const url = 'http://kankumussa.tchimou.com/app/api/login';
-        const url = 'http://51.158.144.47/api_wma2/public/api/enquete';
+        const url = '';
         fetch(url, {
             method: 'POST',
             headers: {
@@ -168,7 +166,7 @@ const EditPasswordComponent = ({ navigation, route, lib }) => {
                         // console.log(values)
                         actions.resetForm();
                         setLoader(true)
-                        nextPage(values)
+                        //nextPage(values)
                     }}
                 >
                     {({

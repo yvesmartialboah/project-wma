@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import { stylesLogin } from './styles';
 import withHOC from '../../_Shared/Lib/index'
-// import { LoginApp } from '../../api/LoginApp/index'
 import { LoginYup } from './yup';
 import { Formik } from 'formik';
-import { url_Base, create_Data, login } from '../../api/UrlApp/index'
 
 const LoginComponent = ({ navigation, lib }) => {
   // Librairie Parent
@@ -91,14 +89,6 @@ const LoginComponent = ({ navigation, lib }) => {
   }
 
   const CONNEXION = (emailAt, passwordAt) => {
-    // const url = 'http://kankumussa.tchimou.com/app/api/kankumussa/kyc/clients';
-    // const url = 'http://kankumussa.tchimou.com/app/api/login';
-    // const url = 'http://51.158.144.47/api_wma2/public/api/enquete';
-    // const url = 'http://51.158.144.47/api_wma2/public/api/login2';
-    // const url = 'https://good-dingo-45.loca.lt/kankumussa3/api/login';
-    // const url = 'https://good-dingo-45.loca.lt/kankumussa3/api/login';
-    // const url = 'https://good-dingo-45.loca.lt/kankumussa3/api/login';
-    // const url = 'http://209.126.3.251/plesk-site-preview/wma.com/https/209.126.3.251/api/login'; // server PayQin
     const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/login'; // server Plesk Us
     fetch(url, {
       method: 'POST',
@@ -109,16 +99,10 @@ const LoginComponent = ({ navigation, lib }) => {
       body: JSON.stringify({
         email: emailAt,
         password: passwordAt
-        // email: 'toto@yopmail.com',
-        // password: '00000000'
       })
     })
       .then((responses) => responses.json())
       .then((response) => {
-        // console.log(typeof response, 'responsex')
-        // console.log(response, 'response')
-        // console.log(response.token, 'response token')
-        // console.log(response.lol, 'response lol')
         if (response.token) {
 
           // Envoie de données au store
@@ -174,120 +158,17 @@ const LoginComponent = ({ navigation, lib }) => {
       });
   }
 
-  const CONNEXIONSave = (emailAt, passwordAt) => {
-    const url = 'http://51.158.144.47/kankumussa/api/login';
-    // const url = 'https://service.mobili.ci/oauth/token';
-    fetch(url, {
-      method: 'post',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify({
-        // grant_type: 'password',
-        // client_id: 1,
-        // client_secret: 'FK5I4wog7FCTqbJN8v9O2Leu9M36krVLPoppNMfO',
-        // username: 'yvesmartialboah@gmail.com',
-        // password: '12345678X'
-        email: 'toto@yopmail.com',
-        password: '00000000'
-        // email: emailAt,
-        // password: passwordAt
-      })
-    })
-      .then((responses) => responses.json())
-      .then((response) => {
-        featureLoad()
-        console.log(response, 'response')
-        // console.log(response.access_token, 'response access_token')
-        console.log(typeof response, 'responsex')
-        if (response) {
-          Toast.show({
-            type: 'success',
-            text1: "Bon retour",
-            text2: 'Parmis nous 🎉🎊',
-            position: 'top',
-            visibilityTime: 4000,
-            autoHide: true,
-          })
-        }
-      })
-      .catch((error) => {
-        Toast.show({
-          type: 'error',
-          text1: "Erreur",
-          text2: "Email ou mot de passe érroné.",
-          position: 'top',
-          visibilityTime: 4000,
-          autoHide: true,
-        })
-        featureLoad()
-        console.log(error, 'erreur interne');
-        // alert(error)
-      });
-  }
-
-  const testCon = () => {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-
-    var raw = JSON.stringify({ "email": "toto@yopmail.com", "password": "00000000" });
-
-    var requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-    };
-
-    fetch("http://51.158.144.47/kankumussa/api/login", requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        console.log(result)
-        console.log(result.token, 'token')
-      })
-      .catch(error => console.log('error', error));
-  }
-
-  const testCon2 = () => {
-    var myHeaders = new Headers();
-    myHeaders.append("Content-Type", "application/json");
-    myHeaders.append("Cookie", "october_session=eyJpdiI6ImpuSmlEeXRtSkpNTlRWZFIxMkV0NVE9PSIsInZhbHVlIjoibG9VbDhHSno4SUVrWG9ITmFXbTlFajgrXC9pWW1mVzhqOTdDcmNYWU9CVDNOdFlXMjU0YnFKNlZVcjRhdHNpaVdpWGJcL2hjNmFaM3FOXC94aHJjMDR3Y0d0dkExQ0ZVRVE0YWpDQklZWWRtN2VCNnNqZXI1dVAwdGJCXC83Q05Md0tHIiwibWFjIjoiZThmOGMxZDczMmY1ZTkwOTYzMDFhNDIyN2Q5MmQyMTQ4OGY4NTYxMTA1YjcxMGY2NWFlMGFiNDIyZDc4ODlmNCJ9");
-
-    var raw = JSON.stringify({ "numero": "0808731300", "prenoms": "Jean-Jaurès", "nom": "Tchimou", "date_naissance": "2021-09-02", "lieu_naissance": "Amangbeu", "nationalite": "ivoirienne", "profession": "Informaticien", "adresse": "RIvera jardin", "autre_contact": "0142930211" });
-
-    var requestOptions = {
-      method: 'POST',
-      headers: myHeaders,
-      body: raw,
-      redirect: 'follow'
-    };
-
-    fetch("http://51.158.144.47/kankumussa/api/kankumussa/kyc/clients?token=?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOjIsImlzcyI6Imh0dHA6Ly81MS4xNTguMTQ0LjQ3L2thbmt1bXVzc2EvYXBpL2xvZ2luIiwiaWF0IjoxNjMxMjE5NzI3LCJleHAiOjE2MzEyMjMzMjcsIm5iZiI6MTYzMTIxOTcyNywianRpIjoiT0tjaUw4VmpPTFlrYkFqRSJ9.yoHmpZP2Kp6FOfJatHtdmIzEWB1mun469eaBDAP7Xkw", requestOptions)
-      .then(response => response.text())
-      .then(result => {
-        console.log(result)
-        console.log(typeof result, 'numero')
-      })
-      .catch(error => console.log('error', error));
-  }
-
 
   const connexionApp = (values) => {
     const emailAt = values.email;
     const passwordAt = values.password;
     setLoader(true)
     CONNEXION(emailAt, passwordAt)
-    // LoginApp(dispatch, featureLoad, navigation, Toast, emailAt, passwordAt, fetch)
   }
 
 
   useEffect(() => {
     hideSplash();
-    // CONNEXION('a', 'a')
-    // testCon()
-    // testCon2()
-    // console.log(data_user, 'data_user')
   });
 
   /*

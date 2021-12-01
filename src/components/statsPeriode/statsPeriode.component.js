@@ -170,12 +170,8 @@ const StatsPeriodeComponent = ({ navigation, lib, route }) => {
 
     const consult = (dateDebut, dateFin) => {
         setLoader(true)
-        // const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/stat?token=' + data_user[0].token + 
-        // const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/stat'; 
         const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/stat2/' + data_user[0].id
         + '/' + dateDebut + '/' +  dateFin; 
-        // const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/stat?firstuser=' + data_user[0].id + 
-        // '&debut=' + dateDebut + '&fin=' + dateFin; //server Plesk Us
         console.log(url, 'url')
         fetch(url, {
             method: 'GET',
