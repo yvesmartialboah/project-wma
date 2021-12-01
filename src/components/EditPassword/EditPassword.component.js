@@ -96,60 +96,58 @@ const EditPasswordComponent = ({ navigation, route, lib }) => {
         hideSplash();
     }, [])
 
-    const nextPage = (param) => {
-        console.log(param)
-        const url = '';
-        fetch(url, {
-            method: 'POST',
-            headers: {
-                Accept: 'application/json',
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                numero: param.confirm_password,
-                nom: param.confirm_password
-                // email: emailAt,
-                // password: passwordAt
-            })
-        })
-            .then((responses) => responses.json())
-            .then((response) => {
-                featureLoad()
-                // console.log(typeof response, 'responsex')
-                // console.log(response, 'response')
-                if (response.status == 200) {
-                    Toast.show({
-                        type: 'success',
-                        text1: "Félicitation",
-                        text2: 'Votre Mot de passe à été mis à jour 🎉🎊',
-                        position: 'top',
-                        visibilityTime: 4000,
-                        autoHide: true,
-                    })
-                    navigation.navigate('Dashboard', {
-                        reload: {
-                            date: new Date()
-                        }
-                    })
-                } else {
-                    Toast.show({
-                        type: 'error',
-                        text1: "Erreur",
-                        text2: "veuillez rééssayer svp !",
-                        position: 'top',
-                        visibilityTime: 4000,
-                        autoHide: true,
-                    })
-                }
-                // console.log(typeof response.data, 'response data')
-                // console.log(response.data.nom, 'response data nom')
-                // console.log(response.status, 'response status')
-            })
-            .catch((error) => {
-                featureLoad()
-                console.log(error, 'erreur');
-            });
-    }
+    // const nextPage = (param) => {
+        //console.log(param)
+        // const url = '';
+        // fetch(url, {
+        //     method: 'POST',
+        //     headers: {
+        //         Accept: 'application/json',
+        //         'Content-Type': 'application/json',
+        //     },
+        //     body: JSON.stringify({
+        //         numero: param.confirm_password,
+        //         nom: param.confirm_password
+        //     })
+        // })
+        //     .then((responses) => responses.json())
+        //     .then((response) => {
+        //         featureLoad()
+        //         // console.log(typeof response, 'responsex')
+        //         // console.log(response, 'response')
+        //         if (response.status == 200) {
+        //             Toast.show({
+        //                 type: 'success',
+        //                 text1: "Félicitation",
+        //                 text2: 'Votre Mot de passe à été mis à jour 🎉🎊',
+        //                 position: 'top',
+        //                 visibilityTime: 4000,
+        //                 autoHide: true,
+        //             })
+        //             navigation.navigate('Dashboard', {
+        //                 reload: {
+        //                     date: new Date()
+        //                 }
+        //             })
+        //         } else {
+        //             Toast.show({
+        //                 type: 'error',
+        //                 text1: "Erreur",
+        //                 text2: "veuillez rééssayer svp !",
+        //                 position: 'top',
+        //                 visibilityTime: 4000,
+        //                 autoHide: true,
+        //             })
+        //         }
+        //         // console.log(typeof response.data, 'response data')
+        //         // console.log(response.data.nom, 'response data nom')
+        //         // console.log(response.status, 'response status')
+        //     })
+        //     .catch((error) => {
+        //         featureLoad()
+        //         console.log(error, 'erreur');
+        //     });
+    // }
 
     return (
         <NativeBaseProvider theme={themeFormLogin}>
