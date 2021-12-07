@@ -95,60 +95,6 @@ const EditPasswordComponent = ({ navigation, route, lib }) => {
     useEffect(() => {
         hideSplash();
     }, [])
-
-    // const nextPage = (param) => {
-        //console.log(param)
-        // const url = '';
-        // fetch(url, {
-        //     method: 'POST',
-        //     headers: {
-        //         Accept: 'application/json',
-        //         'Content-Type': 'application/json',
-        //     },
-        //     body: JSON.stringify({
-        //         numero: param.confirm_password,
-        //         nom: param.confirm_password
-        //     })
-        // })
-        //     .then((responses) => responses.json())
-        //     .then((response) => {
-        //         featureLoad()
-        //         // console.log(typeof response, 'responsex')
-        //         // console.log(response, 'response')
-        //         if (response.status == 200) {
-        //             Toast.show({
-        //                 type: 'success',
-        //                 text1: "Félicitation",
-        //                 text2: 'Votre Mot de passe à été mis à jour 🎉🎊',
-        //                 position: 'top',
-        //                 visibilityTime: 4000,
-        //                 autoHide: true,
-        //             })
-        //             navigation.navigate('Dashboard', {
-        //                 reload: {
-        //                     date: new Date()
-        //                 }
-        //             })
-        //         } else {
-        //             Toast.show({
-        //                 type: 'error',
-        //                 text1: "Erreur",
-        //                 text2: "veuillez rééssayer svp !",
-        //                 position: 'top',
-        //                 visibilityTime: 4000,
-        //                 autoHide: true,
-        //             })
-        //         }
-        //         // console.log(typeof response.data, 'response data')
-        //         // console.log(response.data.nom, 'response data nom')
-        //         // console.log(response.status, 'response status')
-        //     })
-        //     .catch((error) => {
-        //         featureLoad()
-        //         console.log(error, 'erreur');
-        //     });
-    // }
-
     return (
         <NativeBaseProvider theme={themeFormLogin}>
             <AwesomeLoading indicatorId={4} size={50} isActive={loader} text="loading" />
@@ -157,14 +103,11 @@ const EditPasswordComponent = ({ navigation, route, lib }) => {
                 <Formik
                     validationSchema={SitGeoContactPYup}
                     initialValues={{
-                        // password: '',
                         confirm_password: ''
                     }}
                     onSubmit={(values, actions) => {
-                        // console.log(values)
                         actions.resetForm();
                         setLoader(true)
-                        //nextPage(values)
                     }}
                 >
                     {({
@@ -189,50 +132,6 @@ const EditPasswordComponent = ({ navigation, route, lib }) => {
                                     </Text>
                                 </View>
                             </View>
-
-                            {/* password */}
-                            {/* <FormControl isRequired isInvalid={(errors.password && touched.password)}>
-                                <View style={stylesInfoGeneralP.parentinputNum}>
-                                    <View style={stylesInfoGeneralP.soninputNum}>
-                                        <Input
-                                            // style={stylesInfoGeneralP.input}
-                                            type="text"
-                                            placeholder='Mot de passe'
-                                            // keyboardType="numeric"
-                                            onChangeText={handleChange('password')}
-                                            onBlur={handleBlur('password')}
-                                            value={values.password}
-                                            InputRightElement={
-                                                <Icon
-                                                    onPress={() => {
-                                                        // 
-                                                    }}
-                                                    as={<MaterialIcons name={'lock'} />}
-                                                    size="md"
-                                                    m={2}
-                                                    _hover={{
-                                                        color: "#c3b27f",
-                                                    }}
-                                                    _light={{
-                                                        color: "#abb5be",
-                                                    }}
-                                                    _dark={{
-                                                        color: "gray.300",
-                                                    }}
-                                                />
-                                            }
-                                        />
-                                    </View>
-                                </View>
-                                <View style={stylesInfoGeneralP.alert}>
-                                    {(errors.password && touched.password) &&
-                                        <FormControl.ErrorMessage>
-                                            {errors.password}
-                                        </FormControl.ErrorMessage>
-                                    }
-                                </View>
-                            </FormControl> */}
-
 
                             {/* confirm_password */}
                             <FormControl isRequired isInvalid={(errors.confirm_password && touched.confirm_password)}>

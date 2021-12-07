@@ -21,6 +21,9 @@ const LoginComponent = ({ navigation, lib }) => {
     ReduxSelectors,
     Toast,
     AwesomeLoading,
+
+    Api_Base,
+    loginApp,
   } = lib
 
   const {
@@ -89,7 +92,7 @@ const LoginComponent = ({ navigation, lib }) => {
   }
 
   const CONNEXION = (emailAt, passwordAt) => {
-    const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/login'; // server Plesk Us
+    const url = Api_Base + loginApp; // server Plesk Us
     fetch(url, {
       method: 'POST',
       headers: {
@@ -112,7 +115,6 @@ const LoginComponent = ({ navigation, lib }) => {
             pwd: passwordAt
           }))
 
-          // Envoie de données au store
           Toast.show({
             type: 'success',
             text1: "Bon retour",

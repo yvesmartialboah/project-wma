@@ -3,7 +3,7 @@ import * as yup from 'yup'
 export const LoginYup = yup.object().shape({
     email: yup
         .string()
-        .required("L'adresse mail est requise !!!"),
+        .required("L'adresse ip est requise !!!"),
     password: yup
         .string()
         .min(4, ({ min }) => `Le mot de passe doit avoir ${min} caractères`)

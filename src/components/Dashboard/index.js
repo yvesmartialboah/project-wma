@@ -89,13 +89,13 @@ const DashboardComponent = ({ navigation, lib }) => {
       <ImageBackground source={backgroungImage} style={{ height }}>
         <NativeBaseProvider>
           <Stack space={5} mt={0} height={'80%'}>
-            <HeaderComponent navigation={navigation} title={'Bonjour '+ data_user[0].name} action={'Menu'}/>
+            <HeaderComponent navigation={navigation} title={'Tableau de bord'} action={'Menu'}/>
 
 
             {/* --- pub --- */}
             <View style={stylesDashboard.parentPub}>
               <Heading size="lg" color='#35424a' textAlign='center'>
-                Espace Pub
+                Bonjour {data_user[0].name}
               </Heading>
             </View>
             {/* --- pub --- */}

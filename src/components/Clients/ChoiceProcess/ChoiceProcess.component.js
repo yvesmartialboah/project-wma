@@ -23,6 +23,9 @@ const ChoiceProcessComponent = ({ navigation, lib, route }) => {
         Redux,
         ReduxAction,
         ReduxSelectors,
+
+        Api_Base,
+        searchNumero,
     } = lib
 
     const {
@@ -142,13 +145,12 @@ const ChoiceProcessComponent = ({ navigation, lib, route }) => {
         }
     }
     const newResearch = () => {
-        // console.log(codeNumber+numero_search, 'codeNumber+numero_search')
         if (numero_search == null || numero_search == '') {
             alert()
         } else {
             setLoader(true)
-            // const url = 'http://209.126.3.251/plesk-site-preview/wma.com/https/209.126.3.251/api/kankumussa/kyc/clients/search/numero/' + codeNumber + numero_search + '?token=' + data_user[0].token; //server
-            const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/kankumussa/kyc/clients/search/numero/' + codeNumber + numero_search + '?token=' + data_user[0].token; //server Plesk Us
+            const url = Api_Base + searchNumero + codeNumber + numero_search + '?token=' + data_user[0].token; //server Plesk Us
+            console.log(url, 'url')
             fetch(url, {
                 method: 'GET',
                 headers: {
@@ -163,8 +165,8 @@ const ChoiceProcessComponent = ({ navigation, lib, route }) => {
                 .then((response) => {
                     featureLoad()
                     // console.log(typeof response, 'responsex')
-                    console.log(response, 'response.data.numero')
-                    // console.log(response, 'response')
+                    //console.log(response, 'response.data.numero')
+                    console.log(response, 'response')
                     // if (response.status == 200) {
                     // if (response.data && response.data[0].numero == codeNumber + numero_search) {
                     if (response.data.length > 0) {

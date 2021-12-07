@@ -77,14 +77,6 @@ export default function ListRechargeComponent({ navigation, route }) {
   // Data User
 
   useEffect(() => {
-    // console.log(route.params.getvoy.reload, 'route.params')
-    // console.log(route.params.getvoy.time, 'time')
-    // console.log(apiConf, 'apiConf')
-    // console.log(userConf, 'userConf')
-    // setLoader(false)
-    // fetchVoyage(dispatch,ACTION,USR_LOGIN,USR_PASS,USR_ID, featureLoad, apiConf[0].api)
-    // setTimeout( ()=> {
-    // },1000)
   }, [route.params.reload.date]);
 
   const [listDATA, setlistDATA] = useState(DATA);
@@ -104,13 +96,10 @@ export default function ListRechargeComponent({ navigation, route }) {
       setlistDATA(DATA)
     }
     else if (filteredName.length == 0) {
-      // set no data flag to true so as to render flatlist conditionally
-      // console.log(filteredName, 'filteredName')
       setcheckData(false)
 
     }
     else if (Array.isArray(filteredName)) {
-      // console.log(DATA[filteredName.name].sort(), 'sort()')
       setcheckData(true)
       setlistDATA(filteredName)
     }

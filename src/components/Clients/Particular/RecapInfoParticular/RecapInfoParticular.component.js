@@ -24,6 +24,9 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
         ReduxSelectors,
         Toast,
         AwesomeLoading,
+
+        Api_Base,
+        
     } = lib
 
     const {
@@ -99,7 +102,7 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
     }
 
     const saveData = () => {
-        const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterParticulier?token=' + data_user[0].token; //server Plesk Us
+        const url = 'https://kankoumoussa.org/kankumussa/api/enregisterParticulier?token=' + data_user[0].token; //server Plesk Us
         fetch(url, {
             method: 'POST',
             headers: {

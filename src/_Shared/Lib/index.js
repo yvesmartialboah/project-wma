@@ -39,6 +39,9 @@ import HeaderComponent from '../Header/Header'
 import * as RealmCrud from '../../database/db';
 import realm from '../../database/db';
 
+// Api
+import {Api_Base, loginApp, searchNumero} from '../../api/UrlApp'
+
 
 const librairies = {
     reactNative,
@@ -76,6 +79,10 @@ const librairies = {
 
     realm,
     RealmCrud,
+
+    Api_Base,
+    loginApp,
+    searchNumero,
 }
 
 const withHOC = InitialComponent => ({ ...props }) => (
