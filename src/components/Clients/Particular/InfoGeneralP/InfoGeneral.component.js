@@ -88,6 +88,9 @@ const InfoGeneralParticularComponent = ({ navigation, route, lib }) => {
         // console.log(route.params.action.user_id, 'user_id')
         // console.log(data_Info_Particular, 'data_Info_Particular')
         setDate(null)
+        if(route.params.action.user_number != null){
+            setNumero_tel(route.params.action.user_number)
+        }
     }, [route.params.action.date])
     const [civilite, setCivilite] = useState('Monsieur');
     const [sex, setSex] = useState('Masculin');

@@ -91,6 +91,9 @@ const InfoGeneralComponent = ({ navigation, route, lib }) => {
         // console.log(route.params.action.user_id, 'user_id')
         // console.log(data_INFO_Company, 'data_INFO_Company')
         setDate(null)
+        if(route.params.action.user_number != null){
+            setNumero_tel(route.params.action.user_number)
+        }
     }, [route.params.action.date])
  
     const [sex, setSex] = useState('Masculin');

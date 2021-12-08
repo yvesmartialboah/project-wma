@@ -105,7 +105,7 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
     const saveData = () => {
         // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterParticulier?token=' + data_user[0].token; //server Plesk Us
         const url = Api_Base + saveParticular + data_user[0].token; //server Plesk Us
-        console.log(url, 'url')
+        // console.log(url, 'url x', data_Info_Particular[0].numero_tel)
         fetch(url, {
             method: 'POST',
             headers: {
@@ -118,7 +118,8 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
                 nom: data_Info_Particular[0].nom, //-Vu
                 prenoms: data_Info_Particular[0].prenom, //-Vu
                 civilite: data_Info_Particular[0].civilite, //-Vu
-                sexe: data_Info_Particular[0].sex, //-Vu
+                // sexe: data_Info_Particular[0].sex, //-Vu
+                sexe: data_Info_Particular[0].civilite == 'Monsieur'  ? 'M' : 'F' , //-Vu
                 situation_matrimoniale: data_Info_Particular[0].situation_matrimoniale, //-Vu
                 date_naissance: data_Info_Particular[0].date_naissance,  //-Vu
                 lieu_naissance: data_Info_Particular[0].lieu_de_naissance, //-Vu
@@ -132,19 +133,23 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
                 commune: data_Info_Particular[0].commune,  //-Vu
                 quartier: data_Info_Particular[0].quartier,  //-Vu
                 adresse: data_Info_Particular[0].addresse, //-Vu
-                // autre_contact: null, //-Vu
+                
+                autre_contact: data_Info_Particular[0].other_numero, //-Vu + Add
+
                 other_numero: data_Info_Particular[0].other_numero, //-Vu
                 autorite_delivrance: data_Info_Particular[0].autorite_delivrance,  //-Vu
                 other_autorite: data_Info_Particular[0].other_autorite,  //-Vu
                 // --- SitGeoContact ---
-
-                categorie: data_Info_Particular[0].categorie,
-                raison_social: data_Info_Particular[0].raison_sociale,
-                secteur_activite: data_Info_Particular[0].secteur_activite, //-Vu
-                representant_legal: data_Info_Particular[0].representant_legal,
-                contact_representant_legal: data_Info_Particular[0].contact_rep_legal,
-                email: data_Info_Particular[0].email, //-Vu
-                fax: data_Info_Particular[0].fax, //-Vu
+                categorie: 'xxx',
+                fax: 'xxx',
+                email: 'xxx',
+                //categorie: data_Info_Particular[0].categorie,
+                //raison_social: data_Info_Particular[0].raison_sociale,
+                //secteur_activite: data_Info_Particular[0].secteur_activite, //-Vu
+                //representant_legal: data_Info_Particular[0].representant_legal,
+                //contact_representant_legal: data_Info_Particular[0].contact_rep_legal,
+                // fax: data_Info_Particular[0].fax, //-Vu
+                // email: data_Info_Particular[0].email, //-Vu
 
                 // --- PieceContrat ---
                 type_piece: data_Info_Particular[0].type_piece, //-Vu
@@ -154,7 +159,7 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
                 img_piece: data_Info_Particular[0].img_piece,  //-Vu
                 img_contrat: data_Info_Particular[0].img_contrat,  //-Vu
                 image_contrat_signe: data_Info_Particular[0].signature_numerique,  //-Vu
-                image_signature_numerique: data_Info_Particular[0].signature_numerique  //-Vu
+                img_signature_numerique: data_Info_Particular[0].signature_numerique  //-Vu
                 // --- SitGeoContact ---
             })
         })
@@ -162,8 +167,8 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
             .then((response) => {
                 featureLoad()
                 console.log( response, 'response')
-                console.log(typeof response, 'responsex')
-                console.log(response, 'response')
+                // console.log(typeof response, 'responsex')
+                // console.log(response, 'response')
                 // if (response.status == 200) {
                 if (response.code == 200) {
                     Toast.show({
