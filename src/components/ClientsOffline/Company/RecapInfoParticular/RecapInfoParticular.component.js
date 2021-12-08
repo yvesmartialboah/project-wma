@@ -116,6 +116,7 @@ const RecapInfoCompanyOffComponent = ({ navigation, lib, route }) => {
 
             // Info General
             numero: data_INFO_Company[0].numero_tel, //- VU
+            lieu_naissance:  "xxxx",
             categorie: data_INFO_Company[0].categorie, //- VU
             denomination: data_INFO_Company[0].denomination, //- VU
             raison_social: data_INFO_Company[0].raison_sociale, //- VU

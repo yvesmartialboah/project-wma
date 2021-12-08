@@ -22,6 +22,7 @@ export const TodoCompany = {
         firstuser: 'int',
         // --- InfoGeneral ---
         numero: 'string',
+        lieu_naissance: 'string',
         categorie: 'string',
         denomination: 'string',
         raison_social: 'string',

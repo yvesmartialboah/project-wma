@@ -25,6 +25,7 @@ export const companyList = (state = defaultState, action) => {
             id: param.id,
             // --- InfoGeneral ---
             numero_tel: action.payload.param.numero_tel,
+            lieu_naissance: action.payload.param.lieu_naissance, // Add
             categorie: action.payload.param.categorie,
             denomination: action.payload.param.denomination,
             raison_sociale: action.payload.param.raison_sociale,
@@ -76,6 +77,7 @@ export const companyList = (state = defaultState, action) => {
 
             // --- InfoGeneral ---
             numero_tel: null,
+            lieu_naissance: null,
             categorie: null,
             raison_sociale: null,
             secteur_activite: null,
