@@ -43,6 +43,7 @@ export const particularList = (state = defaultState, action) => {
             quartier: action.payload.param.quartier,
             addresse: action.payload.param.addresse,
             other_numero: action.payload.param.other_numero,
+            autre_contact: action.payload.param.autre_contact,
             autorite_delivrance: action.payload.param.autorite_delivrance,
             other_autorite: action.payload.param.other_autorite,
             // --- SitGeoContact ---
@@ -91,6 +92,7 @@ export const particularList = (state = defaultState, action) => {
             quartier: null,
             addresse: null,
             other_numero: null,
+            autre_contact: null,
             // --- SitGeoContact ---
 
             // --- PieceContrat ---

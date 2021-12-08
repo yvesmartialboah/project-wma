@@ -136,6 +136,7 @@ const RecapInfoCompanyOffComponent = ({ navigation, lib, route }) => {
             quartier: data_INFO_Company[0].quartier, //- VU
             adresse: data_INFO_Company[0].addresse, //- VU
             other_numero: data_INFO_Company[0].other_numero, //- VU
+            autre_contact: data_INFO_Company[0].other_numero, //- VU
             autorite_delivrance: data_INFO_Company[0].autorite_delivrance, //- VU
             other_autorite: data_INFO_Company[0].other_autorite, //- VU
             // Situation géographique

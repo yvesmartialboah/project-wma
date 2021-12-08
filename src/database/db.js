@@ -40,6 +40,7 @@ export const TodoCompany = {
         quartier: 'string',
         adresse: 'string',
         other_numero: 'string',
+        autre_contact: 'string',
         autorite_delivrance: 'string',
         other_autorite: 'string',
         // --- SitGeoContact ---
@@ -82,6 +83,7 @@ export const TodoParticular = {
         quartier: 'string',
         adresse: 'string',
         other_numero: 'string',
+        autre_contact: 'string',
         autorite_delivrance: 'string',
         other_autorite: 'string',
         // --- SitGeoContact ---

@@ -124,6 +124,7 @@ const RecapInfoParticularOfflineComponent = ({ navigation, lib }) => {
             
             // autre_contact: null, //-Vu
             other_numero: data_Info_Particular[0].other_numero, //-Vu
+            autre_contact: data_Info_Particular[0].other_numero, //-Vu
             autorite_delivrance: data_Info_Particular[0].autorite_delivrance,
             other_autorite: data_Info_Particular[0].other_autorite,
             // --- SitGeoContact ---

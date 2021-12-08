@@ -130,7 +130,7 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
 
     const TransfertDataClient = () => {
         // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterParticuliers'; //server Plesk Us
-        const url = Api_Base + transfertDataParticularApi; //server Plesk Us
+        const url = Api_Base + transfertDataParticularApi + "?token=" + data_user[0].token; //server Plesk Us
         fetch(url, {
             method: 'POST',
             headers: {
@@ -198,7 +198,8 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
 
     const TransfertDataEntreprise = () => {
         // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterEntreprises'; //server Plesk Us
-        const url = Api_Base + transfertDataCompanyApi; //server Plesk Us
+        const url = Api_Base + transfertDataCompanyApi + "?token=" + data_user[0].token; //server Plesk Us
+        console.log(url, "url")
         fetch(url, {
             method: 'POST',
             headers: {
