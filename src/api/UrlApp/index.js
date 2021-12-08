@@ -11,7 +11,7 @@ const saveParticular = 'enregisterParticulier?token=' // Enregistrement des Part
 
 const saveCompany = 'enregisterEntreprise?token=' // Enregistrement des Entreprises
 
-const statPeriode = 'stat2' // Statistique Période
+const statPeriode = 'stat2/' // Statistique Période
 
 const transfertDataParticularApi = 'enregisterParticuliers' // Transfert de données des Particuliers
 
