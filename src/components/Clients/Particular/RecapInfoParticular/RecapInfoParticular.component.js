@@ -26,6 +26,7 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
         AwesomeLoading,
 
         Api_Base,
+        saveParticular,
         
     } = lib
 
@@ -102,7 +103,9 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
     }
 
     const saveData = () => {
-        const url = 'https://kankoumoussa.org/kankumussa/api/enregisterParticulier?token=' + data_user[0].token; //server Plesk Us
+        // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterParticulier?token=' + data_user[0].token; //server Plesk Us
+        const url = Api_Base + saveParticular + data_user[0].token; //server Plesk Us
+        console.log(url, 'url')
         fetch(url, {
             method: 'POST',
             headers: {
@@ -194,7 +197,7 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
             })
             .catch((error) => {
                 featureLoad()
-                console.log(error, 'erreur');
+                console.log(error, 'erreur x');
             });
     }
     // const saveData = () => {

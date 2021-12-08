@@ -40,7 +40,7 @@ import * as RealmCrud from '../../database/db';
 import realm from '../../database/db';
 
 // Api
-import {Api_Base, loginApp, searchNumero} from '../../api/UrlApp'
+import {Api_Base, loginApp, searchNumero, saveParticular, saveCompany, statPeriode, transfertDataParticularApi, transfertDataCompanyApi} from '../../api/UrlApp'
 
 
 const librairies = {
@@ -83,6 +83,11 @@ const librairies = {
     Api_Base,
     loginApp,
     searchNumero,
+    saveParticular,
+    saveCompany,
+    statPeriode,
+    transfertDataParticularApi,
+    transfertDataCompanyApi
 }
 
 const withHOC = InitialComponent => ({ ...props }) => (

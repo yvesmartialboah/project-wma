@@ -7,8 +7,23 @@ const searchNumero = 'kankumussa/kyc/clients/search/numero/' // Recherche de l'e
 
 const loginApp = 'login' // Connexion à l'api
 
+const saveParticular = 'enregisterParticulier?token=' // Enregistrement des Particuliers
+
+const saveCompany = 'enregisterEntreprise?token=' // Enregistrement des Entreprises
+
+const statPeriode = 'stat2' // Statistique Période
+
+const transfertDataParticularApi = 'enregisterParticuliers' // Transfert de données des Particuliers
+
+const transfertDataCompanyApi = 'enregisterEntreprises' // Transfert de données des Entreprises
+
 export {
     Api_Base,
     loginApp,
     searchNumero,
+    saveParticular,
+    saveCompany,
+    statPeriode,
+    transfertDataParticularApi,
+    transfertDataCompanyApi
 }

@@ -27,6 +27,9 @@ const StatsPeriodeComponent = ({ navigation, lib, route }) => {
         Redux,
         ReduxAction,
         ReduxSelectors,
+
+        Api_Base,
+        statPeriode,
     } = lib
 
     const {
@@ -170,7 +173,9 @@ const StatsPeriodeComponent = ({ navigation, lib, route }) => {
 
     const consult = (dateDebut, dateFin) => {
         setLoader(true)
-        const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/stat2/' + data_user[0].id
+        // const url = 'http://45.13.59.98/api_kankumussa/api/stat2/' + data_user[0].id
+        // + '/' + dateDebut + '/' +  dateFin; 
+        const url = Api_Base + statPeriode + data_user[0].id
         + '/' + dateDebut + '/' +  dateFin; 
         console.log(url, 'url')
         fetch(url, {

@@ -25,6 +25,10 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
         realm,
         RealmCrud,
         AwesomeLoading,
+
+        Api_Base,
+        transfertDataParticularApi,
+        transfertDataCompanyApi
     } = lib
 
     const {
@@ -125,7 +129,8 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
     }
 
     const TransfertDataClient = () => {
-        const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterParticuliers'; //server Plesk Us
+        // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterParticuliers'; //server Plesk Us
+        const url = Api_Base + transfertDataParticularApi; //server Plesk Us
         fetch(url, {
             method: 'POST',
             headers: {
@@ -192,7 +197,8 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
     }
 
     const TransfertDataEntreprise = () => {
-        const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterEntreprises'; //server Plesk Us
+        // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterEntreprises'; //server Plesk Us
+        const url = Api_Base + transfertDataCompanyApi; //server Plesk Us
         fetch(url, {
             method: 'POST',
             headers: {

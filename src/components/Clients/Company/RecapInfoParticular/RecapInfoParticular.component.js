@@ -23,6 +23,9 @@ const RecapInfoCompanyComponent = ({ navigation, lib, route }) => {
         ReduxSelectors,
         Toast,
         AwesomeLoading,
+
+        Api_Base,
+        saveCompany
     } = lib
 
     const {
@@ -97,7 +100,8 @@ const RecapInfoCompanyComponent = ({ navigation, lib, route }) => {
     }, []);
 
     const saveData = () => {
-        const url = 'https://loving-bhaskara.161-97-120-236.plesk.page/kankumussa/api/enregisterEntreprise?token=' + data_user[0].token; //server Plesk Us
+        // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterEntreprise?token=' + data_user[0].token; //server Plesk Us
+        const url = Api_Base + saveCompany + data_user[0].token; //server Plesk Us
         fetch(url, {
             method: 'POST',
             headers: {
