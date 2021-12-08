@@ -102,6 +102,7 @@ const RecapInfoCompanyComponent = ({ navigation, lib, route }) => {
     const saveData = () => {
         // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterEntreprise?token=' + data_user[0].token; //server Plesk Us
         const url = Api_Base + saveCompany + data_user[0].token; //server Plesk Us
+        console.log(url, 'url')
         fetch(url, {
             method: 'POST',
             headers: {
@@ -116,6 +117,7 @@ const RecapInfoCompanyComponent = ({ navigation, lib, route }) => {
                 // sexe: data_INFO_Company[0].sex,
                 // situation_matrimoniale: data_INFO_Company[0].situation_matrimoniale,
                 // date_naissance: data_INFO_Company[0].date_naissance,
+                lieu_naissance:  "xxxx",
                 // lieu_naissance: data_INFO_Company[0].lieu_de_naissance,
                 // nationalite: data_INFO_Company[0].nationalite,
                 // profession: data_INFO_Company[0].profession,

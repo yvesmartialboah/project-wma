@@ -103,7 +103,6 @@ const RecapInfoParticularComponent = ({ navigation, lib, route }) => {
     }
 
     const saveData = () => {
-        // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterParticulier?token=' + data_user[0].token; //server Plesk Us
         const url = Api_Base + saveParticular + data_user[0].token; //server Plesk Us
         // console.log(url, 'url x', data_Info_Particular[0].numero_tel)
         fetch(url, {

@@ -154,11 +154,11 @@ const StatsPeriodeComponent = ({ navigation, lib, route }) => {
 
     const viewStatPeriode = () => {
         if(dateDebut != null && dateFin != null){
-            console.log(dateDebut, 'dateDebut')
-            console.log(dateFin, 'dateFin')
+            // console.log(dateDebut, 'dateDebut')
+            // console.log(dateFin, 'dateFin')
             // let debut = '"' + dateDebut + '"';
             // let fin = '"' + dateFin + '"';
-            consult(dateDebut, dateFin)
+            // consult(dateDebut, dateFin)
         } else {
             Toast.show({
                 type: 'info',
@@ -173,8 +173,6 @@ const StatsPeriodeComponent = ({ navigation, lib, route }) => {
 
     const consult = (dateDebut, dateFin) => {
         setLoader(true)
-        // const url = 'http://45.13.59.98/api_kankumussa/api/stat2/' + data_user[0].id
-        // + '/' + dateDebut + '/' +  dateFin; 
         const url = Api_Base + statPeriode + data_user[0].id
         + '/' + dateDebut + '/' +  dateFin + "?token=" + data_user[0].token; 
         console.log(url, 'url')
