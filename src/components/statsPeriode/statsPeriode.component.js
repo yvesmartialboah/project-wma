@@ -158,7 +158,7 @@ const StatsPeriodeComponent = ({ navigation, lib, route }) => {
             // console.log(dateFin, 'dateFin')
             // let debut = '"' + dateDebut + '"';
             // let fin = '"' + dateFin + '"';
-            // consult(dateDebut, dateFin)
+            consult(dateDebut, dateFin)
         } else {
             Toast.show({
                 type: 'info',
@@ -175,7 +175,7 @@ const StatsPeriodeComponent = ({ navigation, lib, route }) => {
         setLoader(true)
         const url = Api_Base + statPeriode + data_user[0].id
         + '/' + dateDebut + '/' +  dateFin + "?token=" + data_user[0].token; 
-        console.log(url, 'url')
+        // console.log(url, 'url')
         fetch(url, {
             method: 'GET',
             headers: {
