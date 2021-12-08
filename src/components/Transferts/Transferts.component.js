@@ -129,7 +129,6 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
     }
 
     const TransfertDataClient = () => {
-        // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterParticuliers'; //server Plesk Us
         const url = Api_Base + transfertDataParticularApi + "?token=" + data_user[0].token; //server Plesk Us
         fetch(url, {
             method: 'POST',
@@ -183,24 +182,34 @@ const TransfertsComponent = ({ navigation, lib, route }) => {
             })
             .catch((error) => {
                 featureLoad()
-                console.log(error, 'erreur x');
-                Toast.show({
-                    type: 'error',
-                    text1: "Erreur",
-                    text2: "échec du transfert veuillez reprendre.",
-                    position: 'top',
-                    visibilityTime: 4000,
-                    autoHide: true,
-                })
+                console.log(error, 'erreur Transfert Particulier');
+                if(error == "token_expired") {
+                    Toast.show({
+                        type: 'info',
+                        text1: "Token Expiré",
+                        text2: "Veuillez vous reconnecter svp.",
+                        position: 'top',
+                        visibilityTime: 4000,
+                        autoHide: true,
+                    })
+                    navigation.navigate('Login')
+                } else {
+                    Toast.show({
+                        type: 'error',
+                        text1: "Erreur",
+                        text2: "échec du transfert veuillez reprendre.",
+                        position: 'top',
+                        visibilityTime: 4000,
+                        autoHide: true,
+                    })
+                }
             });
 
     }
 
     const TransfertDataEntreprise = () => {
-        // const url = 'http://45.13.59.98/api_kankumussa/api/enregisterEntreprises'; //server Plesk Us
         const url = Api_Base + transfertDataCompanyApi + "?token=" + data_user[0].token; //server Plesk Us
         // console.log(url, "url")
-        // console.log(ClientCompanyLocal, "ClientCompanyLocal")
         fetch(url, {
             method: 'POST',
             headers: {

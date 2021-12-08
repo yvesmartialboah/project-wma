@@ -104,7 +104,8 @@ const RecapInfoParticularOfflineComponent = ({ navigation, lib }) => {
 
             // --- InfoGeneral ---
             civilite: data_Info_Particular[0].civilite, //-Vu
-            sexe: data_Info_Particular[0].sex, //-Vu
+            // sexe: data_Info_Particular[0].sex, //-Vu
+            sexe: data_Info_Particular[0].civilite == 'Monsieur'  ? 'M' : 'F', //-Vu
             numero: data_Info_Particular[0].numero_tel, //-Vu
             nom: data_Info_Particular[0].nom, //-Vu
             prenoms: data_Info_Particular[0].prenom, //-Vu
