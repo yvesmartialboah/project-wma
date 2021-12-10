@@ -1,7 +1,7 @@
 // Api - Application  console.log(typeof data, 'data')
 
 // const url_Base = ''
-const Api_Base = 'http://45.13.59.98/api_kankumussa/api/'
+const Api_Base = 'https://api.kankoumoussa.org/api/'
 
 const searchNumero = 'kankumussa/kyc/clients/search/numero/' // Recherche de l'existance du numéro 
 
